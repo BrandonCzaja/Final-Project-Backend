@@ -46,3 +46,6 @@ gem 'httparty'
 
 # ENV Vars
 gem 'figaro'
+
+# API Pagination 
+gem 'pagy'

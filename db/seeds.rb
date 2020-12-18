@@ -12,7 +12,12 @@
 # Plants by region
 # http://{defaultHost}/api/v1/distributions/{zone_id}/plants
 
-response = HTTParty.get("https://trefle.io/api/v1/plants?token=tM_vyRwHmo__kNvStVE0N3950_E7eGC8nyoCqmZhEuA")
+# ALL PLANTS: DO NOT DELETE THIS CODE
+# response = HTTParty.get("https://trefle.io/api/v1/plants?token=tM_vyRwHmo__kNvStVE0N3950_E7eGC8nyoCqmZhEuA")
+
+
+# PLANTS BY NORTH AMERICAN REGION
+response = HTTParty.get("https://trefle.io/api/v1/distributions/7/plants?token=tM_vyRwHmo__kNvStVE0N3950_E7eGC8nyoCqmZhEuA")
     result = JSON.parse(response.body)
 
     plant_data = result['data'].map do |element|

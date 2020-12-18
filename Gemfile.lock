@@ -98,6 +98,7 @@ GEM
     nio4r (2.5.4)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
+    pagy (3.10.0)
     pg (1.2.3)
     puma (4.3.7)
       nio4r (~> 2.0)
@@ -167,6 +168,7 @@ DEPENDENCIES
   httparty
   jwt
   listen (~> 3.2)
+  pagy
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rack-cors
