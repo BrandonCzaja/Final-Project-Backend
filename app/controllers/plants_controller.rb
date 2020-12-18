@@ -3,10 +3,12 @@ class PlantsController < ApplicationController
 
   # GET /plants
   def index
-    @pagy, @plants = pagy(Plants.all)
-  
+    @plants = Plant.all
+    p @plants
+    # @pagy, @plants = pagy(Plants.all)
+    
 
-    # render json: @plants
+    render json: @plants
   end
 
   # GET /plants/1
