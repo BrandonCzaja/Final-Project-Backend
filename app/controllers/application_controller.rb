@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
     include Pagy::Backend
+    # Runs to confirm that the user is logged in before any other action happens
     before_action :authorized
 
     def encode_token(payload)
@@ -11,6 +12,7 @@ class ApplicationController < ActionController::API
     request.headers['Authorization']
     end
 
+    # If auth-header return the token decoded with JWT
     def decoded_token
     if auth_header
         token = auth_header.split(' ')[1]
@@ -23,6 +25,7 @@ class ApplicationController < ActionController::API
     end
     end
 
+    # If there is a token, decode the token as the user id. Create an instance of user
     def logged_in_user
     if decoded_token
         user_id = decoded_token[0]['user_id']
@@ -30,10 +33,12 @@ class ApplicationController < ActionController::API
     end
     end
 
+    # Checks to see if the user is logged. Returns true if user is logged in
     def logged_in?
     !!logged_in_user
     end
 
+    # Renders message unless user is logged in
     def authorized
     render json: { message: 'Please log in' }, status: :unauthorized unless logged_in?
     end
