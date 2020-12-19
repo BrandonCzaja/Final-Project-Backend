@@ -3,9 +3,9 @@ class PlantsController < ApplicationController
 
   # GET /plants
   def index
-    @plants = Plant.all
-    p @plants
-    # @pagy, @plants = pagy(Plants.all)
+    # @plants = Plant.all
+    # p @plants
+    @pagy, @plants = pagy(Plant.all)
     
 
     render json: @plants
