@@ -82,6 +82,4 @@ test:
 #
 production:
   <<: *default
-  database: plants_backend_production
-  username: test
-  password: test
+  url: <%= ENV['DATABASE_URL'] %>
