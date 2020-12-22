@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
     include Pagy::Backend
     # Runs to confirm that the user is logged in before any other action happens
-    before_action :authorized
+    # before_action :authorized
 
     def encode_token(payload)
     JWT.encode(payload, 'yourSecret')

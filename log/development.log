@@ -680,3 +680,453 @@ Migrating to CreateUsers (20201219200814)
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Test2"], ["password_digest", "$2a$12$/4MaCv.vQJHWRbNV/4kF8O5yf1RceZQpjEWmLJLCRuZkr/9jDveTa"], ["created_at", "2020-12-19 20:13:43.828754"], ["updated_at", "2020-12-19 20:13:43.828754"]]
   [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/login" for ::1 at 2020-12-19 14:32:46 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"Test", "password"=>"[FILTERED]", "user"=>{"username"=>"Test"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Test"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `login'
+Completed 200 OK in 253ms (Views: 0.6ms | ActiveRecord: 7.5ms | Allocations: 3943)
+
+
+Started GET "/auto_login" for ::1 at 2020-12-19 14:33:49 -0600
+Processing by UsersController#auto_login as */*
+  Parameters: {"username"=>"Test", "password"=>"[FILTERED]", "user"=>{"username"=>"Test"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32:in `logged_in_user'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1095)
+
+
+Started GET "/login" for ::1 at 2020-12-19 14:54:08 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/login" for ::1 at 2020-12-19 14:54:14 -0600
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"Test", "password"=>"[FILTERED]", "user"=>{"username"=>"Test"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Test"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `login'
+Completed 200 OK in 274ms (Views: 0.5ms | ActiveRecord: 7.8ms | Allocations: 3952)
+
+
+Started POST "/login" for ::1 at 2020-12-19 14:54:24 -0600
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"Test3", "password"=>"[FILTERED]", "user"=>{"username"=>"Test3"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Test3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `login'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 664)
+
+
+Started POST "/users" for ::1 at 2020-12-19 14:55:19 -0600
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Test3", "password"=>"[FILTERED]", "user"=>{"username"=>"Test3"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Test3"], ["password_digest", "$2a$12$Vsi6gF6dE3XA9sdkyg2joOuTZ.a5GrPS7dIyP2D5WJN6lIIIbPeuS"], ["created_at", "2020-12-19 20:55:19.468360"], ["updated_at", "2020-12-19 20:55:19.468360"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 200 OK in 253ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2920)
+
+
+Started POST "/login" for ::1 at 2020-12-19 14:55:34 -0600
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"Test3", "password"=>"[FILTERED]", "user"=>{"username"=>"Test3"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Test3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `login'
+Completed 200 OK in 258ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 857)
+
+
+Started POST "/auto_login" for ::1 at 2020-12-19 14:56:00 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/auto_login"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auto_login" for ::1 at 2020-12-19 14:56:06 -0600
+Processing by UsersController#auto_login as */*
+  Parameters: {"username"=>"Test3", "password"=>"[FILTERED]", "user"=>{"username"=>"Test3"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32:in `logged_in_user'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 1090)
+
+
+Started DELETE "/users/3" for ::1 at 2020-12-19 14:56:18 -0600
+  
+ActionController::RoutingError (No route matches [DELETE] "/users/3"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-12-20 08:16:49 -0600
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.1ms | Allocations: 295)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 1539)
+
+
+Started GET "/users" for ::1 at 2020-12-20 08:16:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/login" for ::1 at 2020-12-20 08:18:19 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "user"=>{"username"=>"test"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `login'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 4.4ms | Allocations: 1252)
+
+
+Started POST "/users" for ::1 at 2020-12-20 08:18:26 -0600
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "user"=>{"username"=>"test"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "test"], ["password_digest", "$2a$12$JesZTVURPBaS2mTw7y03POiPlK1doio21pcEcrJAYUOiXzY7Zd./S"], ["created_at", "2020-12-20 14:18:26.633368"], ["updated_at", "2020-12-20 14:18:26.633368"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 200 OK in 262ms (Views: 0.4ms | ActiveRecord: 7.3ms | Allocations: 5391)
+
+
+Started GET "/auto_login" for ::1 at 2020-12-20 08:19:13 -0600
+Processing by UsersController#auto_login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "user"=>{"username"=>"test"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32:in `logged_in_user'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 1102)
+
+
+Started POST "/users" for ::1 at 2020-12-20 08:20:02 -0600
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Brandon", "password"=>"[FILTERED]", "user"=>{"username"=>"Brandon"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Brandon"], ["password_digest", "$2a$12$DuQMZ/AUA7GBqhcMsGqmnOm6RQubQjzZ7jDzknEA31tPTYv3EsXQS"], ["created_at", "2020-12-20 14:20:03.219161"], ["updated_at", "2020-12-20 14:20:03.219161"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 200 OK in 246ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 2691)
+
+
+Started POST "/login" for ::1 at 2020-12-20 08:20:37 -0600
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"Brandon", "password"=>"[FILTERED]", "user"=>{"username"=>"Brandon"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Brandon"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `login'
+Completed 200 OK in 240ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 875)
+
+
+Started GET "/auto_login" for ::1 at 2020-12-20 08:21:07 -0600
+Processing by UsersController#auto_login as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32:in `logged_in_user'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 956)
+
+
+Started GET "/" for ::1 at 2020-12-22 09:39:56 -0600
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.5ms | Allocations: 295)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 1539)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-12-22 09:39:56 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/plants" for ::1 at 2020-12-22 09:40:00 -0600
+Processing by PlantsController#index as HTML
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/plants" for ::1 at 2020-12-22 09:41:19 -0600
+Processing by PlantsController#index as HTML
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 105)
+
+
+Started GET "/plants" for ::1 at 2020-12-22 09:41:20 -0600
+Processing by PlantsController#index as HTML
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 105)
+
+
+Started GET "/plants" for ::1 at 2020-12-22 13:10:00 -0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/plants" for ::1 at 2020-12-22 13:10:09 -0600
+Processing by PlantsController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 38)
+
+
+Started GET "/" for ::1 at 2020-12-22 13:10:15 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.3ms | Allocations: 294)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 1537)
+
+
+Started GET "/plants" for ::1 at 2020-12-22 13:13:00 -0600
+Processing by PlantsController#index as HTML
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 168)
+
+
+Started GET "/" for ::1 at 2020-12-22 13:13:11 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.8ms | Allocations: 178)
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 1018)
+
+
+Started GET "/plants" for ::1 at 2020-12-22 13:13:16 -0600
+Processing by PlantsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (9.2ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.534605"], ["updated_at", "2020-12-22 19:13:24.534605"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.559468"], ["updated_at", "2020-12-22 19:13:24.559468"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.562875"], ["updated_at", "2020-12-22 19:13:24.562875"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.565866"], ["updated_at", "2020-12-22 19:13:24.565866"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.569141"], ["updated_at", "2020-12-22 19:13:24.569141"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.587886"], ["updated_at", "2020-12-22 19:13:24.587886"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.591677"], ["updated_at", "2020-12-22 19:13:24.591677"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.594664"], ["updated_at", "2020-12-22 19:13:24.594664"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.597987"], ["updated_at", "2020-12-22 19:13:24.597987"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.6ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.601206"], ["updated_at", "2020-12-22 19:13:24.601206"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.7ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.606272"], ["updated_at", "2020-12-22 19:13:24.606272"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.621486"], ["updated_at", "2020-12-22 19:13:24.621486"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.628288"], ["updated_at", "2020-12-22 19:13:24.628288"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.631637"], ["updated_at", "2020-12-22 19:13:24.631637"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.6ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.635814"], ["updated_at", "2020-12-22 19:13:24.635814"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.644399"], ["updated_at", "2020-12-22 19:13:24.644399"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.648407"], ["updated_at", "2020-12-22 19:13:24.648407"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.651619"], ["updated_at", "2020-12-22 19:13:24.651619"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.654508"], ["updated_at", "2020-12-22 19:13:24.654508"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190500], ["common_name", "Stinging nettle"], ["slug", "urtica-dioica"], ["scientific_name", "Urtica dioica"], ["year", 1753], ["rank", "species"], ["family_common_name", "Nettle family"], ["image", "https://bs.floristic.org/image/o/85256a1c2c098e254fefe05040626a4df49ce248"], ["genus", "Urtica"], ["family", "Urticaceae"], ["created_at", "2020-12-22 19:13:24.660472"], ["updated_at", "2020-12-22 19:13:24.660472"]]
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:26:in `block in index'
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:30:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:33:in `index'
+Completed 200 OK in 8461ms (Views: 7.1ms | ActiveRecord: 41.6ms | Allocations: 62624)
+
+
