@@ -25,8 +25,8 @@ class PlantsController < ApplicationController
     end
     # @plants = Plant.all
     # p @plants
-    @pagy, @plants = pagy(Plant.all)
-    
+    # @pagy, @plants = pagy(Plant.all)
+    @plants = pagy(Plant.all)
 
     render json: @plants
   end
