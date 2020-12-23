@@ -23,10 +23,8 @@ class PlantsController < ApplicationController
        new_plant = Plant.new(data)
        new_plant.save()
     end
-    # @plants = Plant.all
-    # p @plants
-    # @pagy, @plants = pagy(Plant.all)
-    @plants = pagy(Plant.all)
+    p @plants
+    @pagy, @plants = pagy(Plant.all)
 
     render json: @plants
   end
