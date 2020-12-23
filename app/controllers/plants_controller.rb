@@ -3,7 +3,7 @@ class PlantsController < ApplicationController
 
   # GET /plants
   def index
-    response = HTTParty.get("https://trefle.io/api/v1/distributions/7/plants?token=tM_vyRwHmo__kNvStVE0N3950_E7eGC8nyoCqmZhEuA")
+    response = HTTParty.get("https://trefle.io/api/v1/plants?token=tM_vyRwHmo__kNvStVE0N3950_E7eGC8nyoCqmZhEuA")
     result = JSON.parse(response.body)
 
     plant_data = result['data'].map do |element|
