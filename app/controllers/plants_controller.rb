@@ -32,9 +32,9 @@ class PlantsController < ApplicationController
 
 
 
-  def results
+  # def results
   
-  end
+  # end
 
 
   # GET /plants/1
