@@ -3,6 +3,7 @@ class PlantsController < ApplicationController
 
   # GET /plants
   def index
+    
     response = HTTParty.get("https://trefle.io/api/v1/plants?token=tM_vyRwHmo__kNvStVE0N3950_E7eGC8nyoCqmZhEuA")
     # puts response.body
     result = JSON.parse(response.body)
@@ -24,8 +25,10 @@ class PlantsController < ApplicationController
       #  new_plant = Plant.new(data)
       #  new_plant.save()
     end
-    p @plants
-    @pagy, @plants = pagy(Plant.all)
+    # p @plants
+    # @pagy, @plants = pagy(Plant.all)
+    # For Seed Purposes
+    @plants = Plant.all
 
     render json: @plants
   end
