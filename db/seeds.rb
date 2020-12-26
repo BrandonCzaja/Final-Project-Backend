@@ -15,9 +15,18 @@ plant_data = result['data'].map do |element|
     genus: element['genus'],
     family: element['family']
    }
+
+  new_plant = Plant.new(data)     
+  new_plant.save()
+
+  @plants = Plant.all
+  puts @plants
+  puts "Seeding complete"
+
+
+
+
 end
-
-
 
 
 
