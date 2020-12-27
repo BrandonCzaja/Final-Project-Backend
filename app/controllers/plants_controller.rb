@@ -27,10 +27,7 @@ class PlantsController < ApplicationController
 
     @pagy, @plants = pagy(Plant.all, items: 10, page:1, size: [1,4,4,1])
     render json: {data: @plants, 
-                  pagy: pagy_metadata(@pagy)
-                  # Don't forget to put a comman before pagy.series
-                  # pagy.series}
-    }
+                  pagy: pagy_metadata(@pagy)}
   end
 
 
