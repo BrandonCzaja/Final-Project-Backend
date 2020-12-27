@@ -28,12 +28,12 @@ class PlantsController < ApplicationController
 
     end
 
-    @plants = Plant.limit(2)
-    render json: @plants
+    # @plants = Plant.limit(2)
+    # render json: @plants
 
-    # @pagy, @plants = pagy(Plant.all)
-    # render json: {data: @plants, 
-    #               pagy: pagy_metadata(@pagy)}
+    @pagy, @plants = pagy(Plant.all)
+    render json: {data: @plants, 
+                  pagy: pagy_metadata(@pagy)}
   end
 
 
