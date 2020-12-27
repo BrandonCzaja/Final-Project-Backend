@@ -30,7 +30,7 @@ class PlantsController < ApplicationController
     # For Seed Purposes
     # @plants = Plant.all
 
-    render json: @plants
+    render json: {data: @plants, pagy: pagy_metadata(@pagy)}
   end
 
 
