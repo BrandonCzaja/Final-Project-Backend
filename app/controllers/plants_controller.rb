@@ -22,15 +22,13 @@ class PlantsController < ApplicationController
         family: element['family']
        }
 
-      #  new_plant = Plant.new(data)
-      #  new_plant.save()
     end
-    # p @plants
-    @pagy, @plants = pagy(Plant.all)
-    # For Seed Purposes
-    # @plants = Plant.all
 
-    render json: {data: @plants, pagy: pagy_metadata(@pagy)}
+    @pagy, @plants = pagy(Plant.all, items: 10)
+
+
+    render json: {data: @plants, 
+                  pagy: pagy_metadata(@pagy)}
   end
 
 

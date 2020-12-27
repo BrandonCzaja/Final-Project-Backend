@@ -9606,3 +9606,13 @@ Processing by PlantsController#index as */*
 Completed 200 OK in 983ms (Views: 17.5ms | ActiveRecord: 7.6ms | Allocations: 15457)
 
 
+Started GET "/plants/" for ::1 at 2020-12-26 19:06:13 -0600
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:27:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:30:in `index'
+Completed 200 OK in 1182ms (Views: 17.2ms | ActiveRecord: 10.8ms | Allocations: 14689)
+
+
