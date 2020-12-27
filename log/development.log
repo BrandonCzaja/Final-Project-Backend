@@ -9616,3 +9616,192 @@ Processing by PlantsController#index as */*
 Completed 200 OK in 1182ms (Views: 17.2ms | ActiveRecord: 10.8ms | Allocations: 14689)
 
 
+Started GET "/" for ::1 at 2020-12-26 22:27:03 -0600
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.6ms | Allocations: 294)
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 1538)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-12-26 22:27:03 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/plants" for ::1 at 2020-12-26 22:27:05 -0600
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:31: syntax error, unexpected '}', expecting =>
+                  pagy.series}
+                             ^
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:87: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:31: syntax error, unexpected '}', expecting =>
+app/controllers/plants_controller.rb:87: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:31: syntax error, unexpected '}', expecting =>
+app/controllers/plants_controller.rb:87: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/" for ::1 at 2020-12-26 22:28:25 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.6ms | Allocations: 294)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 1538)
+
+
+Started GET "/plants" for ::1 at 2020-12-26 22:28:28 -0600
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:39: syntax error, unexpected `end', expecting '}'
+  end
+  ^~~
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:88: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:39: syntax error, unexpected `end', expecting '}'
+app/controllers/plants_controller.rb:88: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:39: syntax error, unexpected `end', expecting '}'
+app/controllers/plants_controller.rb:88: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/" for ::1 at 2020-12-26 22:29:24 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.5ms | Allocations: 178)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 943)
+
+
+Started GET "/plants" for ::1 at 2020-12-26 22:29:28 -0600
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:37: syntax error, unexpected `end', expecting '}'
+  end
+  ^~~
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:86: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:37: syntax error, unexpected `end', expecting '}'
+app/controllers/plants_controller.rb:86: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:37: syntax error, unexpected `end', expecting '}'
+app/controllers/plants_controller.rb:86: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users" for ::1 at 2020-12-26 22:29:47 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-12-26 22:29:52 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 238)
+
+
+Started GET "/plants" for ::1 at 2020-12-26 22:30:11 -0600
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:33: syntax error, unexpected `end', expecting '}'
+  end
+  ^~~
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:82: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:33: syntax error, unexpected `end', expecting '}'
+app/controllers/plants_controller.rb:82: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:33: syntax error, unexpected `end', expecting '}'
+app/controllers/plants_controller.rb:82: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/" for ::1 at 2020-12-26 22:30:18 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brandonczaja/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 237)
+
+
+Started GET "/plants/" for ::1 at 2020-12-26 22:30:36 -0600
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:33: syntax error, unexpected `end', expecting '}'
+  end
+  ^~~
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:82: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:33: syntax error, unexpected `end', expecting '}'
+app/controllers/plants_controller.rb:82: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:33: syntax error, unexpected `end', expecting '}'
+app/controllers/plants_controller.rb:82: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/plants/" for ::1 at 2020-12-26 22:31:00 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:33: syntax error, unexpected `end', expecting '}'
+  end
+  ^~~
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:82: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:33: syntax error, unexpected `end', expecting '}'
+app/controllers/plants_controller.rb:82: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:33: syntax error, unexpected `end', expecting '}'
+app/controllers/plants_controller.rb:82: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/plants/" for ::1 at 2020-12-26 22:31:41 -0600
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:33: syntax error, unexpected `end', expecting '}'
+  end
+  ^~~
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:82: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:33: syntax error, unexpected `end', expecting '}'
+app/controllers/plants_controller.rb:82: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:33: syntax error, unexpected `end', expecting '}'
+app/controllers/plants_controller.rb:82: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/plants/" for ::1 at 2020-12-26 22:31:54 -0600
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:33: syntax error, unexpected `end', expecting '}'
+  end
+  ^~~
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:82: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:33: syntax error, unexpected `end', expecting '}'
+app/controllers/plants_controller.rb:82: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:33: syntax error, unexpected `end', expecting '}'
+app/controllers/plants_controller.rb:82: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/plants/" for ::1 at 2020-12-26 22:32:26 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:28:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:29:in `index'
+Completed 200 OK in 1022ms (Views: 14.5ms | ActiveRecord: 7.7ms | Allocations: 14670)
+
+

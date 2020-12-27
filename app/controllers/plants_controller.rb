@@ -24,17 +24,13 @@ class PlantsController < ApplicationController
 
     end
 
-    # Pagy testing - KEEP
+
     @pagy, @plants = pagy(Plant.all, items: 10, page:1, size: [1,4,4,1])
     render json: {data: @plants, 
-                  pagy: pagy_metadata(@pagy),
-                  pagy.series}
-
-
-
-    # For Deployment
-    # @plants = Plant.all
-    # render json: @plants
+                  pagy: pagy_metadata(@pagy)
+                  # Don't forget to put a comman before pagy.series
+                  # pagy.series}
+    }
   end
 
 
