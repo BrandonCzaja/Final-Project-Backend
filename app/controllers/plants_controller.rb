@@ -24,11 +24,12 @@ class PlantsController < ApplicationController
 
     end
 
-    @pagy, @plants = pagy(Plant.all, items: 10)
+    # Pagy - KEEP
+    # @pagy, @plants = pagy(Plant.all, items: 10)
+    # render json: {data: @plants, 
+    #               pagy: pagy_metadata(@pagy)}
 
-
-    render json: {data: @plants, 
-                  pagy: pagy_metadata(@pagy)}
+    @plants = Plant.all
   end
 
 
