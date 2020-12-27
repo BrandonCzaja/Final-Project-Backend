@@ -20,7 +20,6 @@ plant_data = result['data'].map do |element|
   new_plant.save()
 
   @plants = Plant.all
-  puts @plants
   puts "Seeding complete"
 
 

@@ -9837,3 +9837,404 @@ Processing by PlantsController#index as */*
 Completed 200 OK in 914ms (Views: 23.0ms | ActiveRecord: 7.8ms | Allocations: 14705)
 
 
+Started GET "/plants/" for ::1 at 2020-12-26 22:46:42 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:28:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:29:in `index'
+Completed 200 OK in 1336ms (Views: 14.4ms | ActiveRecord: 7.9ms | Allocations: 14676)
+
+
+Started GET "/plants/" for ::1 at 2020-12-26 22:48:11 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:28:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:29:in `index'
+Completed 200 OK in 867ms (Views: 15.9ms | ActiveRecord: 6.1ms | Allocations: 15786)
+
+
+Started GET "/plants/" for ::1 at 2020-12-26 22:48:57 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:28:in `index'
+Completed 500 Internal Server Error in 564ms (ActiveRecord: 2.6ms | Allocations: 4507)
+
+
+  
+Pagy::OverflowError (expected :page in 1..1; got 5):
+  
+app/controllers/plants_controller.rb:28:in `index'
+Started GET "/plants/" for ::1 at 2020-12-26 22:49:40 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:28:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:29:in `index'
+Completed 200 OK in 1023ms (Views: 15.5ms | ActiveRecord: 5.6ms | Allocations: 15844)
+
+
+Started GET "/plants/" for ::1 at 2020-12-26 22:50:01 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:28:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:29:in `index'
+Completed 200 OK in 547ms (Views: 6.0ms | ActiveRecord: 0.9ms | Allocations: 8893)
+
+
+Started GET "/plants/" for ::1 at 2020-12-26 22:50:37 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:28:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:29:in `index'
+Completed 200 OK in 761ms (Views: 6.4ms | ActiveRecord: 0.8ms | Allocations: 8881)
+
+
+Started GET "/plants/" for ::1 at 2020-12-26 22:50:58 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:28:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:29:in `index'
+Completed 200 OK in 663ms (Views: 6.0ms | ActiveRecord: 0.8ms | Allocations: 8871)
+
+
+Started GET "/plants/" for ::1 at 2020-12-26 22:51:48 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:28:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:29:in `index'
+Completed 200 OK in 715ms (Views: 6.4ms | ActiveRecord: 0.9ms | Allocations: 8868)
+
+
+Started GET "/plants/" for ::1 at 2020-12-26 22:52:26 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:28:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:29:in `index'
+Completed 200 OK in 1025ms (Views: 7.8ms | ActiveRecord: 0.7ms | Allocations: 8871)
+
+
+Started GET "/plants/" for ::1 at 2020-12-26 22:53:10 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:28:in `index'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:29:in `index'
+Completed 200 OK in 949ms (Views: 5.2ms | ActiveRecord: 0.6ms | Allocations: 8885)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 08:12:31 -0600
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:30: syntax error, unexpected '}', expecting =>
+...y: pagy_metadata(@pagy), links}
+...                              ^
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:80: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:30: syntax error, unexpected '}', expecting =>
+app/controllers/plants_controller.rb:80: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:30: syntax error, unexpected '}', expecting =>
+app/controllers/plants_controller.rb:80: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/plants/" for ::1 at 2020-12-27 08:13:10 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:27:in `index'
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:28:in `index'
+Completed 200 OK in 1829ms (Views: 17.0ms | ActiveRecord: 11.4ms | Allocations: 16712)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (10.1ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 167892], ["common_name", "Common plantain"], ["slug", "plantago-major"], ["scientific_name", "Plantago major"], ["year", 1753], ["rank", "species"], ["family_common_name", "Plantain family"], ["image", "https://bs.floristic.org/image/o/36c2225c7d24a897eaf055e99eac26b3f5ceffa3"], ["genus", "Plantago"], ["family", "Plantaginaceae"], ["created_at", "2020-12-27 14:21:01.455043"], ["updated_at", "2020-12-27 14:21:01.455043"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 166081], ["common_name", "Common reed"], ["slug", "phragmites-australis"], ["scientific_name", "Phragmites australis"], ["year", 1841], ["rank", "species"], ["family_common_name", "Grass family"], ["image", "https://bs.floristic.org/image/o/1155e1614588374ce93aedb701ae8483e2cae45f"], ["genus", "Phragmites"], ["family", "Poaceae"], ["created_at", "2020-12-27 14:21:01.474711"], ["updated_at", "2020-12-27 14:21:01.474711"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 167120], ["common_name", "Scots pine"], ["slug", "pinus-sylvestris"], ["scientific_name", "Pinus sylvestris"], ["year", 1753], ["rank", "species"], ["family_common_name", "Pine family"], ["image", "https://bs.floristic.org/image/o/33d84b84c09347d360afa0d610e220664cfb6d93"], ["genus", "Pinus"], ["family", "Pinaceae"], ["created_at", "2020-12-27 14:21:01.480497"], ["updated_at", "2020-12-27 14:21:01.480497"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 151726], ["common_name", "Bird's-foot trefoil"], ["slug", "lotus-corniculatus"], ["scientific_name", "Lotus corniculatus"], ["year", 1753], ["rank", "species"], ["family_common_name", "Pea family"], ["image", "https://bs.floristic.org/image/o/c2180ef57b83b419e4b851c058003d56ad2c6bbe"], ["genus", "Lotus"], ["family", "Fabaceae"], ["created_at", "2020-12-27 14:21:01.487255"], ["updated_at", "2020-12-27 14:21:01.487255"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 168794], ["common_name", "Rough bluegrass"], ["slug", "poa-trivialis"], ["scientific_name", "Poa trivialis"], ["year", 1753], ["rank", "species"], ["family_common_name", "Grass family"], ["image", "https://bs.floristic.org/image/o/8e4f8472f36f36175a8d2fca4723059699f9d46e"], ["genus", "Poa"], ["family", "Poaceae"], ["created_at", "2020-12-27 14:21:01.493043"], ["updated_at", "2020-12-27 14:21:01.493043"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 139683], ["common_name", "Ground ivy"], ["slug", "glechoma-hederacea"], ["scientific_name", "Glechoma hederacea"], ["year", 1753], ["rank", "species"], ["family_common_name", "Mint family"], ["image", "https://bs.floristic.org/image/o/d7aa2ca54f628e1f5a67dd672aeebb006d281a9b"], ["genus", "Glechoma"], ["family", "Lamiaceae"], ["created_at", "2020-12-27 14:21:01.499054"], ["updated_at", "2020-12-27 14:21:01.499054"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 183086], ["common_name", "European mountain ash"], ["slug", "sorbus-aucuparia"], ["scientific_name", "Sorbus aucuparia"], ["year", 1753], ["rank", "species"], ["family_common_name", "Rose family"], ["image", "https://bs.floristic.org/image/o/63073d2fbf45b90701279405ecc2eec0272906ed"], ["genus", "Sorbus"], ["family", "Rosaceae"], ["created_at", "2020-12-27 14:21:01.504141"], ["updated_at", "2020-12-27 14:21:01.504141"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 138374], ["common_name", "Stickywilly"], ["slug", "galium-aparine"], ["scientific_name", "Galium aparine"], ["year", 1753], ["rank", "species"], ["family_common_name", "Madder family"], ["image", "https://bs.floristic.org/image/o/dda8d72438e461abaca1e717c43b1555d2727bc8"], ["genus", "Galium"], ["family", "Rubiaceae"], ["created_at", "2020-12-27 14:21:01.509512"], ["updated_at", "2020-12-27 14:21:01.509512"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["api_id", 178451], ["common_name", "Black elderberry"], ["slug", "sambucus-nigra"], ["scientific_name", "Sambucus nigra"], ["year", 1753], ["rank", "species"], ["image", "https://bs.floristic.org/image/o/594bda8000b118433847bf0973eb397de8a87543"], ["genus", "Sambucus"], ["family", "Viburnaceae"], ["created_at", "2020-12-27 14:21:01.516116"], ["updated_at", "2020-12-27 14:21:01.516116"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190033], ["common_name", "Common wheat"], ["slug", "triticum-aestivum"], ["scientific_name", "Triticum aestivum"], ["year", 1753], ["rank", "species"], ["family_common_name", "Grass family"], ["image", "https://bs.floristic.org/image/o/d4d05e22148e878ca3728beda0139b6dbe42fa3c"], ["genus", "Triticum"], ["family", "Poaceae"], ["created_at", "2020-12-27 14:21:01.521817"], ["updated_at", "2020-12-27 14:21:01.521817"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 118634], ["common_name", "Common mouse-ear chickweed"], ["slug", "cerastium-fontanum"], ["scientific_name", "Cerastium fontanum"], ["year", 1816], ["rank", "species"], ["family_common_name", "Pink family"], ["image", "https://bs.floristic.org/image/o/38a8a07c9c0cd6083b2a8dca1be4ac7f0e49b709"], ["genus", "Cerastium"], ["family", "Caryophyllaceae"], ["created_at", "2020-12-27 14:21:01.528141"], ["updated_at", "2020-12-27 14:21:01.528141"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 1235524], ["common_name", "European alder"], ["slug", "alnus-glutinosa"], ["scientific_name", "Alnus glutinosa"], ["year", 1790], ["rank", "species"], ["family_common_name", "Birch family"], ["image", "https://bs.floristic.org/image/o/2730cc06110e471d878bf14af815f83905866a64"], ["genus", "Alnus"], ["family", "Betulaceae"], ["created_at", "2020-12-27 14:21:01.533963"], ["updated_at", "2020-12-27 14:21:01.533963"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 151164], ["common_name", "Perennial ryegrass"], ["slug", "lolium-perenne"], ["scientific_name", "Lolium perenne"], ["year", 1753], ["rank", "species"], ["family_common_name", "Grass family"], ["image", "https://bs.floristic.org/image/o/f5b89a095969703e65d37a83c28a2d7af125b839"], ["genus", "Lolium"], ["family", "Poaceae"], ["created_at", "2020-12-27 14:21:01.538974"], ["updated_at", "2020-12-27 14:21:01.538974"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 111375], ["common_name", "European white birch"], ["slug", "betula-pendula"], ["scientific_name", "Betula pendula"], ["year", 1788], ["rank", "species"], ["family_common_name", "Birch family"], ["image", "https://bs.floristic.org/image/o/8b54826c7cc96e83f953ea09872ee3026c8d598e"], ["genus", "Betula"], ["family", "Betulaceae"], ["created_at", "2020-12-27 14:21:01.544998"], ["updated_at", "2020-12-27 14:21:01.544998"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 141927], ["common_name", "Eltrot"], ["slug", "heracleum-sphondylium"], ["scientific_name", "Heracleum sphondylium"], ["year", 1753], ["rank", "species"], ["family_common_name", "Carrot family"], ["image", "https://bs.floristic.org/image/o/795061348098dfe2c4cdedd6a5dcb5c9db848d55"], ["genus", "Heracleum"], ["family", "Apiaceae"], ["created_at", "2020-12-27 14:21:01.551953"], ["updated_at", "2020-12-27 14:21:01.551953"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (1.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 139259], ["common_name", "Robert geranium"], ["slug", "geranium-robertianum"], ["scientific_name", "Geranium robertianum"], ["year", 1753], ["rank", "species"], ["family_common_name", "Geranium family"], ["image", "https://bs.floristic.org/image/o/15aff4c873c771b9ea9ded1648b7b23b8641a2a5"], ["genus", "Geranium"], ["family", "Geraniaceae"], ["created_at", "2020-12-27 14:21:01.567232"], ["updated_at", "2020-12-27 14:21:01.567232"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 127884], ["common_name", "Mountain wavy hairgrass"], ["slug", "avenella-flexuosa"], ["scientific_name", "Avenella flexuosa"], ["year", 1838], ["rank", "species"], ["family_common_name", "Grass family"], ["image", "https://d2seqvvyy3b8p2.cloudfront.net/36096e9d4ceb8271fde266276ce454f1.jpg"], ["genus", "Avenella"], ["family", "Poaceae"], ["created_at", "2020-12-27 14:21:01.576117"], ["updated_at", "2020-12-27 14:21:01.576117"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 171392], ["common_name", "Blackthorn"], ["slug", "prunus-spinosa"], ["scientific_name", "Prunus spinosa"], ["year", 1753], ["rank", "species"], ["family_common_name", "Rose family"], ["image", "https://bs.floristic.org/image/o/74001fa4fbba45263756df516209aba8525620f9"], ["genus", "Prunus"], ["family", "Rosaceae"], ["created_at", "2020-12-27 14:21:01.583455"], ["updated_at", "2020-12-27 14:21:01.583455"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 101851], ["common_name", "Sycamore maple"], ["slug", "acer-pseudoplatanus"], ["scientific_name", "Acer pseudoplatanus"], ["year", 1753], ["rank", "species"], ["family_common_name", "Soapberry family"], ["image", "https://bs.floristic.org/image/o/d2747c12a135a00ff8e6d8af86acbec3c6f8248d"], ["genus", "Acer"], ["family", "Sapindaceae"], ["created_at", "2020-12-27 14:21:01.602234"], ["updated_at", "2020-12-27 14:21:01.602234"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 127829], ["common_name", "Tufted hairgrass"], ["slug", "deschampsia-cespitosa"], ["scientific_name", "Deschampsia cespitosa"], ["year", 1812], ["rank", "species"], ["family_common_name", "Grass family"], ["image", "https://bs.floristic.org/image/o/8193be51b20eb8bd28a29d67dd96e9287ddbcbec"], ["genus", "Deschampsia"], ["family", "Poaceae"], ["created_at", "2020-12-27 14:21:01.611300"], ["updated_at", "2020-12-27 14:21:01.611300"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.7ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 171239], ["common_name", "Common selfheal"], ["slug", "prunella-vulgaris"], ["scientific_name", "Prunella vulgaris"], ["year", 1753], ["rank", "species"], ["family_common_name", "Mint family"], ["image", "https://bs.floristic.org/image/o/b46f4000f9bec28dc6d74d501ddc15445e7f7667"], ["genus", "Prunella"], ["family", "Lamiaceae"], ["created_at", "2020-12-27 14:22:41.297968"], ["updated_at", "2020-12-27 14:22:41.297968"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.8ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 171239], ["common_name", "Common selfheal"], ["slug", "prunella-vulgaris"], ["scientific_name", "Prunella vulgaris"], ["year", 1753], ["rank", "species"], ["family_common_name", "Mint family"], ["image", "https://bs.floristic.org/image/o/b46f4000f9bec28dc6d74d501ddc15445e7f7667"], ["genus", "Prunella"], ["family", "Lamiaceae"], ["created_at", "2020-12-27 14:23:10.787196"], ["updated_at", "2020-12-27 14:23:10.787196"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 168714], ["common_name", "Kentucky bluegrass"], ["slug", "poa-pratensis"], ["scientific_name", "Poa pratensis"], ["year", 1753], ["rank", "species"], ["family_common_name", "Grass family"], ["image", "https://bs.floristic.org/image/o/6e25db3d223a2e7b26a3c762c4861ab5fb9010ac"], ["genus", "Poa"], ["family", "Poaceae"], ["created_at", "2020-12-27 14:23:10.793050"], ["updated_at", "2020-12-27 14:23:10.793050"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 157316], ["common_name", "Purple moorgrass"], ["slug", "molinia-caerulea"], ["scientific_name", "Molinia caerulea"], ["year", 1794], ["rank", "species"], ["family_common_name", "Grass family"], ["image", "https://bs.floristic.org/image/o/b5a10b8476cda289a13eeb246ae9fcd0270faac7"], ["genus", "Molinia"], ["family", "Poaceae"], ["created_at", "2020-12-27 14:23:10.796742"], ["updated_at", "2020-12-27 14:23:10.796742"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["api_id", 144279], ["common_name", "Common st. johnswort"], ["slug", "hypericum-perforatum"], ["scientific_name", "Hypericum perforatum"], ["year", 1753], ["rank", "species"], ["image", "https://bs.floristic.org/image/o/6e7a63228d463cba1f0b9f5a58ccc9436f2778f3"], ["genus", "Hypericum"], ["family", "Hypericaceae"], ["created_at", "2020-12-27 14:23:10.800610"], ["updated_at", "2020-12-27 14:23:10.800610"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 170556], ["common_name", "Erect cinquefoil"], ["slug", "potentilla-erecta"], ["scientific_name", "Potentilla erecta"], ["year", 1797], ["rank", "species"], ["family_common_name", "Rose family"], ["image", "https://bs.floristic.org/image/o/5487d9cebda9ab860383eef1cdf11aad0fcf3db7"], ["genus", "Potentilla"], ["family", "Rosaceae"], ["created_at", "2020-12-27 14:23:10.803988"], ["updated_at", "2020-12-27 14:23:10.803988"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 111174], ["common_name", "Lawndaisy"], ["slug", "bellis-perennis"], ["scientific_name", "Bellis perennis"], ["year", 1753], ["rank", "species"], ["family_common_name", "Aster family"], ["image", "https://bs.floristic.org/image/o/055448a32f8bbf37a1a43dd807385373410bfcf0"], ["genus", "Bellis"], ["family", "Asteraceae"], ["created_at", "2020-12-27 14:23:10.807504"], ["updated_at", "2020-12-27 14:23:10.807504"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 120923], ["common_name", "Bull thistle"], ["slug", "cirsium-vulgare"], ["scientific_name", "Cirsium vulgare"], ["year", 2006], ["rank", "species"], ["family_common_name", "Aster family"], ["image", "https://bs.floristic.org/image/o/8d152c039c42720f282359e792954734ebfa6d89"], ["genus", "Cirsium"], ["family", "Asteraceae"], ["created_at", "2020-12-27 14:23:10.811601"], ["updated_at", "2020-12-27 14:23:10.811601"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 173364], ["common_name", "Cork oak"], ["slug", "quercus-suber"], ["scientific_name", "Quercus suber"], ["year", 1753], ["rank", "species"], ["family_common_name", "Beech family"], ["image", "https://bs.floristic.org/image/o/18d98dce42b463a97cca4e642ab61aecce8c74f6"], ["genus", "Quercus"], ["family", "Fagaceae"], ["created_at", "2020-12-27 14:23:10.816793"], ["updated_at", "2020-12-27 14:23:10.816793"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 127363], ["common_name", "Queen anne's lace"], ["slug", "daucus-carota"], ["scientific_name", "Daucus carota"], ["year", 1753], ["rank", "species"], ["family_common_name", "Carrot family"], ["image", "https://bs.floristic.org/image/o/1a8e32a56cb9c6202c1e5b58898ea11ad6b00d4d"], ["genus", "Daucus"], ["family", "Apiaceae"], ["created_at", "2020-12-27 14:23:10.820431"], ["updated_at", "2020-12-27 14:23:10.820431"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 105191], ["common_name", "Woodland angelica"], ["slug", "angelica-sylvestris"], ["scientific_name", "Angelica sylvestris"], ["year", 1753], ["rank", "species"], ["family_common_name", "Carrot family"], ["image", "https://bs.floristic.org/image/o/3eb27cbd0ad74eb598dfdd2313e0422d35d25199"], ["genus", "Angelica"], ["family", "Apiaceae"], ["created_at", "2020-12-27 14:23:10.823932"], ["updated_at", "2020-12-27 14:23:10.823932"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 144423], ["common_name", "Hairy cat's ear"], ["slug", "hypochaeris-radicata"], ["scientific_name", "Hypochaeris radicata"], ["year", 1753], ["rank", "species"], ["family_common_name", "Aster family"], ["image", "https://d2seqvvyy3b8p2.cloudfront.net/6d0af0bfb352c0254ea3019d7b6a5844.jpg"], ["genus", "Hypochaeris"], ["family", "Asteraceae"], ["created_at", "2020-12-27 14:23:10.827607"], ["updated_at", "2020-12-27 14:23:10.827607"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 132844], ["common_name", "Field horsetail"], ["slug", "equisetum-arvense"], ["scientific_name", "Equisetum arvense"], ["year", 1753], ["rank", "species"], ["family_common_name", "Horsetail family"], ["image", "https://bs.floristic.org/image/o/f4a835b6ae1d6eadd4033990066759428648d86a"], ["genus", "Equisetum"], ["family", "Equisetaceae"], ["created_at", "2020-12-27 14:23:10.831695"], ["updated_at", "2020-12-27 14:23:10.831695"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 139372], ["common_name", "Herb bennet"], ["slug", "geum-urbanum"], ["scientific_name", "Geum urbanum"], ["year", 1753], ["rank", "species"], ["family_common_name", "Rose family"], ["image", "https://bs.floristic.org/image/o/8a5a9fed6cdcf07097e8f8cbe71f154dfba074ce"], ["genus", "Geum"], ["family", "Rosaceae"], ["created_at", "2020-12-27 14:23:10.835610"], ["updated_at", "2020-12-27 14:23:10.835610"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 166753], ["common_name", "Norway spruce"], ["slug", "picea-abies"], ["scientific_name", "Picea abies"], ["year", 1881], ["rank", "species"], ["family_common_name", "Pine family"], ["image", "https://bs.floristic.org/image/o/839086b536fc2782b9c1cc0f9687b97f3a18ef43"], ["genus", "Picea"], ["family", "Pinaceae"], ["created_at", "2020-12-27 14:23:10.839486"], ["updated_at", "2020-12-27 14:23:10.839486"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 165335], ["common_name", "Reed canarygrass"], ["slug", "phalaris-arundinacea"], ["scientific_name", "Phalaris arundinacea"], ["year", 1753], ["rank", "species"], ["family_common_name", "Grass family"], ["image", "https://bs.floristic.org/image/o/8ef6dfd8db76016394ccb54cd75baca93105e165"], ["genus", "Phalaris"], ["family", "Poaceae"], ["created_at", "2020-12-27 14:23:10.843816"], ["updated_at", "2020-12-27 14:23:10.843816"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 191449], ["common_name", "Germander speedwell"], ["slug", "veronica-chamaedrys"], ["scientific_name", "Veronica chamaedrys"], ["year", 1753], ["rank", "species"], ["family_common_name", "Plantain family"], ["image", "https://bs.floristic.org/image/o/2b8bd09230b0f06ab9fa52f4c4023d485c91c2a4"], ["genus", "Veronica"], ["family", "Plantaginaceae"], ["created_at", "2020-12-27 14:23:10.847625"], ["updated_at", "2020-12-27 14:23:10.847625"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 190808], ["common_name", "Whortleberry"], ["slug", "vaccinium-myrtillus"], ["scientific_name", "Vaccinium myrtillus"], ["year", 1753], ["rank", "species"], ["family_common_name", "Heath family"], ["image", "https://bs.floristic.org/image/o/6bf7a0827cc0d59e8e43304ee00858a32cf6467f"], ["genus", "Vaccinium"], ["family", "Ericaceae"], ["created_at", "2020-12-27 14:23:10.851026"], ["updated_at", "2020-12-27 14:23:10.851026"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 153561], ["common_name", "Purple loosestrife"], ["slug", "lythrum-salicaria"], ["scientific_name", "Lythrum salicaria"], ["year", 1753], ["rank", "species"], ["family_common_name", "Loosestrife family"], ["image", "https://bs.floristic.org/image/o/e42dd296a1fd0fe265bde29e60175cb9326bb9ec"], ["genus", "Lythrum"], ["family", "Lythraceae"], ["created_at", "2020-12-27 14:23:10.854942"], ["updated_at", "2020-12-27 14:23:10.854942"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 132057], ["common_name", "Quackgrass"], ["slug", "elymus-repens"], ["scientific_name", "Elymus repens"], ["year", 1947], ["rank", "species"], ["family_common_name", "Grass family"], ["image", "https://d2seqvvyy3b8p2.cloudfront.net/80f1ec52846152e047da188e56b970c4.jpg"], ["genus", "Elymus"], ["family", "Poaceae"], ["created_at", "2020-12-27 14:23:10.858335"], ["updated_at", "2020-12-27 14:23:10.858335"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 149582], ["common_name", "Oxeye daisy"], ["slug", "leucanthemum-vulgare"], ["scientific_name", "Leucanthemum vulgare"], ["year", 1779], ["rank", "species"], ["family_common_name", "Aster family"], ["image", "https://bs.floristic.org/image/o/cc03c870f80172d0faf20d14ff8291d050afd13f"], ["genus", "Leucanthemum"], ["family", "Asteraceae"], ["created_at", "2020-12-27 14:23:10.862516"], ["updated_at", "2020-12-27 14:23:10.862516"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.9ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 172188], ["common_name", "Western brackenfern"], ["slug", "pteridium-aquilinum"], ["scientific_name", "Pteridium aquilinum"], ["year", 1879], ["rank", "species"], ["family_common_name", "Bracken Fern family"], ["image", "https://bs.floristic.org/image/o/eaa1e69cec1d11160144f54a337e66dbf5ab8a45"], ["genus", "Pteridium"], ["family", "Dennstaedtiaceae"], ["created_at", "2020-12-27 14:23:36.848946"], ["updated_at", "2020-12-27 14:23:36.848946"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 115845], ["common_name", "Cuckoo flower"], ["slug", "cardamine-pratensis"], ["scientific_name", "Cardamine pratensis"], ["year", 1753], ["rank", "species"], ["family_common_name", "Mustard family"], ["image", "https://bs.floristic.org/image/o/a6ac04ab0d502606025e1ca27d2ce46053d5c034"], ["genus", "Cardamine"], ["family", "Brassicaceae"], ["created_at", "2020-12-27 14:23:36.854244"], ["updated_at", "2020-12-27 14:23:36.854244"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 169371], ["common_name", "Prostrate knotweed"], ["slug", "polygonum-aviculare"], ["scientific_name", "Polygonum aviculare"], ["year", 1753], ["rank", "species"], ["family_common_name", "Buckwheat family"], ["image", "https://bs.floristic.org/image/o/0a51eeca4bc1fbc60f8f6146b185783bcce94be4"], ["genus", "Polygonum"], ["family", "Polygonaceae"], ["created_at", "2020-12-27 14:23:36.858029"], ["updated_at", "2020-12-27 14:23:36.858029"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 191787], ["common_name", "Bird vetch"], ["slug", "vicia-cracca"], ["scientific_name", "Vicia cracca"], ["year", 1753], ["rank", "species"], ["family_common_name", "Pea family"], ["image", "https://bs.floristic.org/image/o/1485047189c839114b670830222c9f8365a06d61"], ["genus", "Vicia"], ["family", "Fabaceae"], ["created_at", "2020-12-27 14:23:36.862789"], ["updated_at", "2020-12-27 14:23:36.862789"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 119679], ["common_name", "French-willow"], ["slug", "epilobium-angustifolium"], ["scientific_name", "Epilobium angustifolium"], ["year", 1753], ["rank", "species"], ["family_common_name", "Evening Primrose family"], ["image", "https://bs.floristic.org/image/o/a93defaecaa5572905c05ea863ca09dbbe54e85d"], ["genus", "Epilobium"], ["family", "Onagraceae"], ["created_at", "2020-12-27 14:23:36.866860"], ["updated_at", "2020-12-27 14:23:36.866860"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 176931], ["common_name", "Bitter dock"], ["slug", "rumex-obtusifolius"], ["scientific_name", "Rumex obtusifolius"], ["year", 1753], ["rank", "species"], ["family_common_name", "Buckwheat family"], ["image", "https://bs.floristic.org/image/o/bff585ae8c8d50ee79cafc9bccce500a4d0ded8b"], ["genus", "Rumex"], ["family", "Polygonaceae"], ["created_at", "2020-12-27 14:23:36.870500"], ["updated_at", "2020-12-27 14:23:36.870500"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 137615], ["common_name", "Woodland strawberry"], ["slug", "fragaria-vesca"], ["scientific_name", "Fragaria vesca"], ["year", 1753], ["rank", "species"], ["family_common_name", "Rose family"], ["image", "https://bs.floristic.org/image/o/a3b43a0cf8694059cdb2ae6630b7d412f1d676f9"], ["genus", "Fragaria"], ["family", "Rosaceae"], ["created_at", "2020-12-27 14:23:36.873847"], ["updated_at", "2020-12-27 14:23:36.873847"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 170143], ["common_name", "European aspen"], ["slug", "populus-tremula"], ["scientific_name", "Populus tremula"], ["year", 1753], ["rank", "species"], ["family_common_name", "Willow family"], ["image", "https://bs.floristic.org/image/o/f3449aef992de448dcfd4242f94f62780727ae77"], ["genus", "Populus"], ["family", "Salicaceae"], ["created_at", "2020-12-27 14:23:36.877279"], ["updated_at", "2020-12-27 14:23:36.877279"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 130506], ["common_name", "Male fern"], ["slug", "dryopteris-filix-mas"], ["scientific_name", "Dryopteris filix-mas"], ["year", 1834], ["rank", "species"], ["family_common_name", "Polypody family"], ["image", "https://bs.floristic.org/image/o/3b39ae0843fb6bacb96cee2d7342bb84144311d5"], ["genus", "Dryopteris"], ["family", "Polypodiaceae"], ["created_at", "2020-12-27 14:23:36.881556"], ["updated_at", "2020-12-27 14:23:36.881556"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 123338], ["common_name", "Bloodtwig dogwood"], ["slug", "cornus-sanguinea"], ["scientific_name", "Cornus sanguinea"], ["year", 1753], ["rank", "species"], ["family_common_name", "Dogwood family"], ["image", "https://bs.floristic.org/image/o/7647378cf292a85977482a06f8d7e414c366646a"], ["genus", "Cornus"], ["family", "Cornaceae"], ["created_at", "2020-12-27 14:23:36.885511"], ["updated_at", "2020-12-27 14:23:36.885511"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 186154], ["common_name", "Common lilac"], ["slug", "syringa-vulgaris"], ["scientific_name", "Syringa vulgaris"], ["year", 1753], ["rank", "species"], ["family_common_name", "Olive family"], ["image", "https://bs.floristic.org/image/o/70f8c6bddf331adcbef7493a72f9cbff83afad92"], ["genus", "Syringa"], ["family", "Oleaceae"], ["created_at", "2020-12-27 14:23:36.889693"], ["updated_at", "2020-12-27 14:23:36.889693"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 151509], ["common_name", "European honeysuckle"], ["slug", "lonicera-periclymenum"], ["scientific_name", "Lonicera periclymenum"], ["year", 1753], ["rank", "species"], ["family_common_name", "Honeysuckle family"], ["image", "https://bs.floristic.org/image/o/1ae401ee0d0d644f5d14293e79b1972d93ef0548"], ["genus", "Lonicera"], ["family", "Caprifoliaceae"], ["created_at", "2020-12-27 14:23:36.893302"], ["updated_at", "2020-12-27 14:23:36.893302"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 161098], ["common_name", "Rice"], ["slug", "oryza-sativa"], ["scientific_name", "Oryza sativa"], ["year", 1753], ["rank", "species"], ["family_common_name", "Grass family"], ["image", "https://bs.floristic.org/image/o/d22b00ace0483990f6753b0380e647c3688e4214"], ["genus", "Oryza"], ["family", "Poaceae"], ["created_at", "2020-12-27 14:23:36.897298"], ["updated_at", "2020-12-27 14:23:36.897298"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 147663], ["common_name", "Meadow pea"], ["slug", "lathyrus-pratensis"], ["scientific_name", "Lathyrus pratensis"], ["year", 1753], ["rank", "species"], ["family_common_name", "Pea family"], ["image", "https://bs.floristic.org/image/o/95b8567a27c61c82f91a8ac46228f316ecee021f"], ["genus", "Lathyrus"], ["family", "Fabaceae"], ["created_at", "2020-12-27 14:23:36.901214"], ["updated_at", "2020-12-27 14:23:36.901214"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 176855], ["common_name", "Common sheep sorrel"], ["slug", "rumex-acetosella"], ["scientific_name", "Rumex acetosella"], ["year", 1753], ["rank", "species"], ["family_common_name", "Buckwheat family"], ["image", "https://bs.floristic.org/image/o/58a9618c0be8e5ca4e1633d6bed8d5f57d36e637"], ["genus", "Rumex"], ["family", "Polygonaceae"], ["created_at", "2020-12-27 14:23:36.904883"], ["updated_at", "2020-12-27 14:23:36.904883"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 167021], ["common_name", "Aleppo pine"], ["slug", "pinus-halepensis"], ["scientific_name", "Pinus halepensis"], ["year", 1768], ["rank", "species"], ["family_common_name", "Pine family"], ["image", "https://bs.floristic.org/image/o/adc0540c6d0465d62ec203f878eef234f5df7609"], ["genus", "Pinus"], ["family", "Pinaceae"], ["created_at", "2020-12-27 14:23:36.908281"], ["updated_at", "2020-12-27 14:23:36.908281"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.6ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 138663], ["common_name", "Yellow spring bedstraw"], ["slug", "galium-verum"], ["scientific_name", "Galium verum"], ["year", 1753], ["rank", "species"], ["family_common_name", "Madder family"], ["image", "https://bs.floristic.org/image/o/a93b14df757eb9476e85e3388cea99649b0a9d1b"], ["genus", "Galium"], ["family", "Rubiaceae"], ["created_at", "2020-12-27 14:23:36.911822"], ["updated_at", "2020-12-27 14:23:36.911822"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 107095], ["common_name", "Silverweed cinquefoil"], ["slug", "argentina-anserina"], ["scientific_name", "Argentina anserina"], ["year", 1898], ["rank", "species"], ["family_common_name", "Rose family"], ["image", "https://bs.floristic.org/image/o/c2965e0cbf932de8282e2458f9e72812230600ba"], ["genus", "Argentina"], ["family", "Rosaceae"], ["created_at", "2020-12-27 14:23:36.916052"], ["updated_at", "2020-12-27 14:23:36.916052"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 114923], ["common_name", "Hedge false bindweed"], ["slug", "calystegia-sepium"], ["scientific_name", "Calystegia sepium"], ["year", 1810], ["rank", "species"], ["family_common_name", "Morning-glory family"], ["image", "https://bs.floristic.org/image/o/9d6e2c7bd6640934a03a7b983d44944e325d8062"], ["genus", "Calystegia"], ["family", "Convolvulaceae"], ["created_at", "2020-12-27 14:23:36.919944"], ["updated_at", "2020-12-27 14:23:36.919944"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("api_id", "common_name", "slug", "scientific_name", "year", "rank", "family_common_name", "image", "genus", "family", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["api_id", 107967], ["common_name", "Common wormwood"], ["slug", "artemisia-vulgaris"], ["scientific_name", "Artemisia vulgaris"], ["year", 1753], ["rank", "species"], ["family_common_name", "Aster family"], ["image", "https://bs.floristic.org/image/o/3dadce17016c2713682bbf16c9fb812558f1a070"], ["genus", "Artemisia"], ["family", "Asteraceae"], ["created_at", "2020-12-27 14:23:36.923644"], ["updated_at", "2020-12-27 14:23:36.923644"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/plants/" for ::1 at 2020-12-27 08:25:01 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:27:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:28:in `index'
+Completed 200 OK in 913ms (Views: 16.7ms | ActiveRecord: 8.2ms | Allocations: 16703)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 08:30:22 -0600
+Processing by PlantsController#index as */*
+Completed 500 Internal Server Error in 768ms (ActiveRecord: 0.0ms | Allocations: 63196)
+
+
+  
+NameError (undefined local variable or method `plants_per_page' for #<PlantsController:0x00007f9decd6c9f0>
+Did you mean?  plants_path):
+  
+app/controllers/plants_controller.rb:30:in `index'
+Started GET "/plants/" for ::1 at 2020-12-27 08:31:23 -0600
+Processing by PlantsController#index as */*
+Completed 500 Internal Server Error in 1058ms (ActiveRecord: 0.0ms | Allocations: 63195)
+
+
+  
+NameError (undefined local variable or method `plants_per_page' for #<PlantsController:0x00007f9de94fde70>
+Did you mean?  plants_path):
+  
+app/controllers/plants_controller.rb:30:in `index'
+Started GET "/plants/" for ::1 at 2020-12-27 08:32:01 -0600
+Processing by PlantsController#index as */*
+Completed 500 Internal Server Error in 1164ms (ActiveRecord: 0.0ms | Allocations: 63199)
+
+
+  
+NameError (undefined local variable or method `plants_per_page' for #<PlantsController:0x00007f9debf98c48>
+Did you mean?  plants_path):
+  
+app/controllers/plants_controller.rb:32:in `index'
+Started GET "/plants/" for ::1 at 2020-12-27 08:32:18 -0600
+Processing by PlantsController#index as */*
+Completed 204 No Content in 539ms (ActiveRecord: 0.0ms | Allocations: 3283)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 08:32:59 -0600
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/plants_controller.rb:35:in `index'
+Completed 200 OK in 869ms (Views: 16.8ms | ActiveRecord: 5.5ms | Allocations: 12675)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 08:34:09 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/plants_controller.rb:32:in `index'
+Completed 200 OK in 2564ms (Views: 16.6ms | ActiveRecord: 7.5ms | Allocations: 13515)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 08:35:07 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/plants_controller.rb:32:in `index'
+Completed 200 OK in 920ms (Views: 14.2ms | ActiveRecord: 7.7ms | Allocations: 13515)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 08:35:29 -0600
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1[0m  [["LIMIT", 2]]
+  ↳ app/controllers/plants_controller.rb:32:in `index'
+Completed 200 OK in 723ms (Views: 14.5ms | ActiveRecord: 5.1ms | Allocations: 12242)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1302304497635649690)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1302304497635649690)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

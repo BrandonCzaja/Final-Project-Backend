@@ -1,9 +1,13 @@
 class PlantsController < ApplicationController
+  
+
   before_action :set_plant, only: [:show, :update, :destroy]
+
+  
+
 
   # GET /plants
   def index
-    
     response = HTTParty.get("https://trefle.io/api/v1/plants?token=tM_vyRwHmo__kNvStVE0N3950_E7eGC8nyoCqmZhEuA")
     # puts response.body
     result = JSON.parse(response.body)
@@ -24,10 +28,12 @@ class PlantsController < ApplicationController
 
     end
 
+    @plants = Plant.limit(2)
+    render json: @plants
 
-    @pagy, @plants = pagy(Plant.all, items: 10, page:1, size: [1,4,4,1])
-    render json: {data: @plants, 
-                  pagy: pagy_metadata(@pagy)}
+    # @pagy, @plants = pagy(Plant.all)
+    # render json: {data: @plants, 
+    #               pagy: pagy_metadata(@pagy)}
   end
 
 
