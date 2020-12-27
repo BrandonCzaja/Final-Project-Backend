@@ -10555,3 +10555,769 @@ Processing by PlantsController#index as */*
 Completed 200 OK in 542ms (Views: 5.6ms | ActiveRecord: 0.6ms | Allocations: 8877)
 
 
+Started GET "/plants/" for ::1 at 2020-12-27 09:37:52 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:34:in `index'
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:35:in `index'
+Completed 200 OK in 988ms (Views: 15.8ms | ActiveRecord: 7.8ms | Allocations: 16704)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 09:38:27 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:34:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:35:in `index'
+Completed 200 OK in 927ms (Views: 5.8ms | ActiveRecord: 0.9ms | Allocations: 8893)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 09:38:42 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:34:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:35:in `index'
+Completed 200 OK in 580ms (Views: 6.8ms | ActiveRecord: 0.9ms | Allocations: 8890)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 09:38:52 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:34:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:35:in `index'
+Completed 200 OK in 671ms (Views: 5.9ms | ActiveRecord: 0.8ms | Allocations: 8902)
+
+
+Started POST "/login" for ::1 at 2020-12-27 09:39:05 -0600
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "user"=>{"username"=>"test"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `login'
+Completed 200 OK in 235ms (Views: 0.3ms | ActiveRecord: 4.4ms | Allocations: 3608)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 09:50:08 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:34:in `index'
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:35:in `index'
+Completed 200 OK in 1277ms (Views: 6.0ms | ActiveRecord: 2.0ms | Allocations: 8996)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 09:50:53 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:34:in `index'
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:35:in `index'
+Completed 200 OK in 839ms (Views: 6.3ms | ActiveRecord: 1.2ms | Allocations: 8872)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 09:51:02 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:34:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:35:in `index'
+Completed 200 OK in 604ms (Views: 14.4ms | ActiveRecord: 0.9ms | Allocations: 8871)
+
+
+Started POST "/login" for ::1 at 2020-12-27 09:51:44 -0600
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "user"=>{"username"=>"test"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `login'
+Completed 200 OK in 230ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 860)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 09:59:05 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:34:in `index'
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:35:in `index'
+Completed 200 OK in 1006ms (Views: 6.2ms | ActiveRecord: 2.0ms | Allocations: 8997)
+
+
+Started GET "/plants/:id" for ::1 at 2020-12-27 10:22:43 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#show as */*
+  Parameters: {"id"=>":id"}
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:79:in `set_plant'
+Completed 404 Not Found in 10ms (ActiveRecord: 6.6ms | Allocations: 2259)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant with 'id'=:id):
+  
+app/controllers/plants_controller.rb:79:in `set_plant'
+Started GET "/plants/:id" for ::1 at 2020-12-27 10:22:52 -0600
+Processing by PlantsController#show as */*
+  Parameters: {"id"=>":id"}
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:79:in `set_plant'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms | Allocations: 653)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant with 'id'=:id):
+  
+app/controllers/plants_controller.rb:79:in `set_plant'
+Started GET "/plants/:id" for ::1 at 2020-12-27 10:23:08 -0600
+Processing by PlantsController#show as */*
+  Parameters: {"id"=>":id"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:79:in `set_plant'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 653)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant with 'id'=:id):
+  
+app/controllers/plants_controller.rb:79:in `set_plant'
+Started GET "/plants/:id" for ::1 at 2020-12-27 10:23:28 -0600
+Processing by PlantsController#show as */*
+  Parameters: {"id"=>":id"}
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:79:in `set_plant'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms | Allocations: 656)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant with 'id'=:id):
+  
+app/controllers/plants_controller.rb:79:in `set_plant'
+Started GET "/undefinedundefined" for ::1 at 2020-12-27 10:57:59 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/undefinedundefined"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/undefinedundefined" for ::1 at 2020-12-27 11:00:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/undefinedundefined"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/plants/" for ::1 at 2020-12-27 11:37:44 -0600
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (1.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:32:in `index'
+Completed 200 OK in 901ms (Views: 31.8ms | ActiveRecord: 8.3ms | Allocations: 27737)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 11:38:34 -0600
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:32:in `index'
+Completed 200 OK in 808ms (Views: 15.5ms | ActiveRecord: 0.7ms | Allocations: 19999)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 11:41:52 -0600
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.8ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:32:in `index'
+Completed 200 OK in 963ms (Views: 16.9ms | ActiveRecord: 0.8ms | Allocations: 19997)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 11:43:21 -0600
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:32:in `index'
+Completed 200 OK in 1092ms (Views: 34.0ms | ActiveRecord: 5.6ms | Allocations: 26952)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 11:43:32 -0600
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.9ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:32:in `index'
+Completed 200 OK in 614ms (Views: 16.6ms | ActiveRecord: 0.9ms | Allocations: 20001)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 11:43:42 -0600
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:32:in `index'
+Completed 200 OK in 597ms (Views: 21.0ms | ActiveRecord: 0.7ms | Allocations: 20001)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 11:45:06 -0600
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.8ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:32:in `index'
+Completed 200 OK in 1051ms (Views: 32.7ms | ActiveRecord: 0.8ms | Allocations: 19985)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 11:52:36 -0600
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.8ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/plants_controller.rb:32:in `index'
+Completed 200 OK in 1071ms (Views: 14.8ms | ActiveRecord: 1.0ms | Allocations: 12547)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 11:53:05 -0600
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1[0m  [["LIMIT", 2]]
+  ↳ app/controllers/plants_controller.rb:32:in `index'
+Completed 200 OK in 842ms (Views: 11.9ms | ActiveRecord: 10.1ms | Allocations: 11064)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 11:53:53 -0600
+Processing by PlantsController#index as */*
+Completed 500 Internal Server Error in 904ms (ActiveRecord: 0.0ms | Allocations: 63111)
+
+
+  
+NameError (undefined local variable or method `max_pagination_limit' for #<PlantsController:0x00007fad1783d620>):
+  
+app/controllers/plants_controller.rb:82:in `limit'
+app/controllers/plants_controller.rb:31:in `index'
+Started GET "/plants/" for ::1 at 2020-12-27 11:54:21 -0600
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1[0m  [["LIMIT", 2]]
+  ↳ app/controllers/plants_controller.rb:32:in `index'
+Completed 200 OK in 579ms (Views: 20.6ms | ActiveRecord: 6.1ms | Allocations: 11118)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 11:54:55 -0600
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:32:in `index'
+Completed 200 OK in 859ms (Views: 33.0ms | ActiveRecord: 6.2ms | Allocations: 11656)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 11:55:47 -0600
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:33:in `index'
+Completed 200 OK in 957ms (Views: 15.2ms | ActiveRecord: 5.3ms | Allocations: 11642)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 12:05:26 -0600
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:33:in `index'
+Completed 200 OK in 1013ms (Views: 2.9ms | ActiveRecord: 1.0ms | Allocations: 4858)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 12:05:34 -0600
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:33:in `index'
+Completed 200 OK in 843ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 4734)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 12:07:00 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:32:in `index'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:33:in `index'
+Completed 200 OK in 1046ms (Views: 18.8ms | ActiveRecord: 8.9ms | Allocations: 12443)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 12:09:02 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:34:in `index'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:35:in `index'
+Completed 200 OK in 766ms (Views: 12.9ms | ActiveRecord: 6.6ms | Allocations: 12407)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 12:09:37 -0600
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:35: syntax error, unexpected '\n', expecting =>
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:97: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:35: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:97: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:35: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:97: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/plants/" for ::1 at 2020-12-27 12:09:48 -0600
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:35: syntax error, unexpected '\n', expecting =>
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:97: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:35: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:97: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:35: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:97: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/plants/" for ::1 at 2020-12-27 12:10:04 -0600
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:35: syntax error, unexpected '\n', expecting =>
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:97: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:35: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:97: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:35: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:97: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/plants/" for ::1 at 2020-12-27 12:10:10 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:34:in `index'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:35:in `index'
+Completed 200 OK in 806ms (Views: 12.1ms | ActiveRecord: 5.9ms | Allocations: 12376)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 12:23:10 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:34:in `index'
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:35:in `index'
+Completed 200 OK in 925ms (Views: 15.6ms | ActiveRecord: 1.9ms | Allocations: 12150)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 12:27:51 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:34:in `index'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:40:in `index'
+Completed 200 OK in 990ms (Views: 12.3ms | ActiveRecord: 10.5ms | Allocations: 12896)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 12:28:12 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:34:in `index'
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:40:in `index'
+Completed 200 OK in 530ms (Views: 3.1ms | ActiveRecord: 1.0ms | Allocations: 5916)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 12:29:10 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:34:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:40:in `index'
+Completed 200 OK in 890ms (Views: 2.9ms | ActiveRecord: 0.8ms | Allocations: 5942)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 12:30:18 -0600
+Processing by PlantsController#index as */*
+Completed 500 Internal Server Error in 1018ms (ActiveRecord: 0.0ms | Allocations: 2991)
+
+
+  
+Pagy::OverflowError (expected :page in 1..1; got 10):
+  
+app/controllers/plants_controller.rb:32:in `new'
+app/controllers/plants_controller.rb:32:in `index'
+Started GET "/plants/" for ::1 at 2020-12-27 12:30:43 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:42:in `index'
+Completed 500 Internal Server Error in 919ms (Views: 12.1ms | ActiveRecord: 6.0ms | Allocations: 12978)
+
+
+  
+Pagy::OverflowError (expected :page in 1..1; got 10):
+  
+app/controllers/plants_controller.rb:45:in `new'
+app/controllers/plants_controller.rb:45:in `index'
+Started GET "/plants/" for ::1 at 2020-12-27 12:30:52 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:42:in `index'
+Completed 500 Internal Server Error in 745ms (Views: 2.7ms | ActiveRecord: 0.8ms | Allocations: 6024)
+
+
+  
+Pagy::OverflowError (expected :page in 1..1; got 10):
+  
+app/controllers/plants_controller.rb:45:in `new'
+app/controllers/plants_controller.rb:45:in `index'
+Started GET "/plants/" for ::1 at 2020-12-27 12:31:45 -0600
+Processing by PlantsController#index as */*
+Started GET "/plants/" for ::1 at 2020-12-27 12:31:46 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+  [1m[36mPlant Load (0.9ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:42:in `index'
+Completed 500 Internal Server Error in 758ms (Views: 3.6ms | ActiveRecord: 2.3ms | Allocations: 6170)
+
+
+  
+Pagy::OverflowError (expected :page in 1..1; got 10):
+  
+app/controllers/plants_controller.rb:45:in `new'
+app/controllers/plants_controller.rb:45:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:42:in `index'
+Completed 500 Internal Server Error in 2226ms (Views: 2.9ms | ActiveRecord: 0.7ms | Allocations: 40777)
+
+
+  
+Pagy::OverflowError (expected :page in 1..1; got 10):
+  
+app/controllers/plants_controller.rb:45:in `new'
+app/controllers/plants_controller.rb:45:in `index'
+Started GET "/plants/" for ::1 at 2020-12-27 12:33:12 -0600
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:45: syntax error, unexpected '\n', expecting =>
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:104: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:45: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:104: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:45: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:104: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/plants/" for ::1 at 2020-12-27 12:33:35 -0600
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:45: syntax error, unexpected '\n', expecting =>
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:104: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:45: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:104: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:45: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:104: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/plants/" for ::1 at 2020-12-27 12:34:02 -0600
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:46: syntax error, unexpected '\n', expecting =>
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:105: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:46: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:105: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:46: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:105: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/plants/" for ::1 at 2020-12-27 12:35:04 -0600
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:46: syntax error, unexpected '\n', expecting =>
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:105: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:46: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:105: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:46: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:105: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/plants/" for ::1 at 2020-12-27 12:36:43 -0600
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:46: syntax error, unexpected '\n', expecting =>
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:105: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:46: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:105: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:46: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:105: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/plants/" for ::1 at 2020-12-27 12:36:49 -0600
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:46: syntax error, unexpected '\n', expecting =>
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:105: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:46: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:105: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:46: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:105: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/plants/" for ::1 at 2020-12-27 12:37:22 -0600
+  
+SyntaxError (/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:46: syntax error, unexpected '\n', expecting =>
+/Users/brandonczaja/Desktop/Final-Project/plants_backend/app/controllers/plants_controller.rb:108: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:46: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:108: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:46: syntax error, unexpected '\n', expecting =>
+app/controllers/plants_controller.rb:108: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/plants/" for ::1 at 2020-12-27 12:37:31 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:44:in `index'
+Completed 200 OK in 1007ms (Views: 11.5ms | ActiveRecord: 8.6ms | Allocations: 12973)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 12:52:48 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:37:in `index'
+Completed 200 OK in 1030ms (Views: 11.0ms | ActiveRecord: 7.6ms | Allocations: 13816)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 12:58:37 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:37:in `index'
+Completed 200 OK in 948ms (Views: 3.2ms | ActiveRecord: 1.2ms | Allocations: 6023)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 13:01:12 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:37:in `index'
+Completed 200 OK in 668ms (Views: 2.3ms | ActiveRecord: 0.8ms | Allocations: 5998)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 13:01:21 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:37:in `index'
+Completed 200 OK in 811ms (Views: 2.8ms | ActiveRecord: 0.8ms | Allocations: 6003)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 13:03:39 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:37:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+Completed 200 OK in 906ms (Views: 16.6ms | ActiveRecord: 5.7ms | Allocations: 15861)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 13:12:26 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:37:in `index'
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+Completed 200 OK in 928ms (Views: 6.9ms | ActiveRecord: 2.1ms | Allocations: 9068)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 13:17:05 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:37:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+Completed 200 OK in 864ms (Views: 6.2ms | ActiveRecord: 1.8ms | Allocations: 8941)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 13:21:06 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:37:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+Completed 200 OK in 1024ms (Views: 5.6ms | ActiveRecord: 0.8ms | Allocations: 8937)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 13:21:09 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:37:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+Completed 200 OK in 896ms (Views: 4.6ms | ActiveRecord: 0.7ms | Allocations: 8967)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 13:21:16 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:37:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+Completed 200 OK in 606ms (Views: 5.1ms | ActiveRecord: 0.8ms | Allocations: 8939)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 13:22:18 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:37:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+Completed 200 OK in 902ms (Views: 5.2ms | ActiveRecord: 0.8ms | Allocations: 8936)
+
+
+Started GET "/plants?page=" for ::1 at 2020-12-27 13:22:27 -0600
+Processing by PlantsController#index as */*
+  Parameters: {"page"=>""}
+Started GET "/plants?page=2" for ::1 at 2020-12-27 13:22:28 -0600
+Processing by PlantsController#index as */*
+  Parameters: {"page"=>"2"}
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:37:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+Completed 200 OK in 984ms (Views: 5.6ms | ActiveRecord: 0.8ms | Allocations: 12029)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:37:in `index'
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+Completed 200 OK in 570ms (Views: 5.4ms | ActiveRecord: 1.9ms | Allocations: 17848)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 13:23:22 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+Completed 200 OK in 789ms (Views: 10.6ms | ActiveRecord: 8.7ms | Allocations: 13044)
+
+
+Started GET "/plants?page=" for ::1 at 2020-12-27 13:23:27 -0600
+Processing by PlantsController#index as */*
+  Parameters: {"page"=>""}
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+Completed 200 OK in 557ms (Views: 2.7ms | ActiveRecord: 0.9ms | Allocations: 5980)
+
+
+Started GET "/plants?page=" for ::1 at 2020-12-27 13:23:42 -0600
+Processing by PlantsController#index as */*
+  Parameters: {"page"=>""}
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+Completed 200 OK in 580ms (Views: 2.6ms | ActiveRecord: 0.9ms | Allocations: 5978)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 13:24:11 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:37:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+Completed 200 OK in 802ms (Views: 14.6ms | ActiveRecord: 6.0ms | Allocations: 15893)
+
+
+Started GET "/plants?page=2" for ::1 at 2020-12-27 13:24:17 -0600
+Processing by PlantsController#index as */*
+  Parameters: {"page"=>"2"}
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:37:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+Completed 200 OK in 565ms (Views: 5.5ms | ActiveRecord: 0.9ms | Allocations: 8956)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 13:25:00 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+Completed 200 OK in 996ms (Views: 13.8ms | ActiveRecord: 5.5ms | Allocations: 12946)
+
+
+Started GET "/plants?page=" for ::1 at 2020-12-27 13:25:04 -0600
+Processing by PlantsController#index as */*
+  Parameters: {"page"=>""}
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+Completed 200 OK in 545ms (Views: 2.7ms | ActiveRecord: 1.0ms | Allocations: 6014)
+
+
+Started GET "/plants?page=" for ::1 at 2020-12-27 13:25:12 -0600
+Processing by PlantsController#index as */*
+  Parameters: {"page"=>""}
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "plants" LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:38:in `index'
+Completed 200 OK in 558ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 5992)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 13:26:30 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:35:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+Completed 200 OK in 1044ms (Views: 16.6ms | ActiveRecord: 8.7ms | Allocations: 14771)
+
+
+Started GET "/plants/" for ::1 at 2020-12-27 13:26:32 -0600
+Processing by PlantsController#index as */*
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:35:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+Completed 200 OK in 749ms (Views: 4.2ms | ActiveRecord: 0.9ms | Allocations: 6963)
+
+
+Started GET "/plants?page=2" for ::1 at 2020-12-27 13:26:39 -0600
+Processing by PlantsController#index as */*
+  Parameters: {"page"=>"2"}
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:35:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 10]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+Completed 200 OK in 902ms (Views: 3.8ms | ActiveRecord: 0.8ms | Allocations: 6965)
+
+
+Started GET "/plants?page=3" for ::1 at 2020-12-27 13:26:44 -0600
+Processing by PlantsController#index as */*
+  Parameters: {"page"=>"3"}
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:35:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 20]]
+  ↳ app/controllers/plants_controller.rb:36:in `index'
+Completed 200 OK in 792ms (Views: 4.0ms | ActiveRecord: 0.9ms | Allocations: 6952)
+
+

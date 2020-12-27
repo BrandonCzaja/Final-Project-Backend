@@ -3,14 +3,16 @@ class PlantsController < ApplicationController
 
   before_action :set_plant, only: [:show, :update, :destroy]
 
+  # Has to be capitalized 
+  MAX_PAGINATION_LIMIT = 10
   
-
 
   # GET /plants
   def index
     response = HTTParty.get("https://trefle.io/api/v1/plants?token=tM_vyRwHmo__kNvStVE0N3950_E7eGC8nyoCqmZhEuA")
     # puts response.body
     result = JSON.parse(response.body)
+    
 
     plant_data = result['data'].map do |element|
       data = { 
@@ -28,12 +30,14 @@ class PlantsController < ApplicationController
 
     end
 
-    # @plants = Plant.limit(2)
-    # render json: @plants
+  
 
     @pagy, @plants = pagy(Plant.all)
     render json: {data: @plants, 
-                  pagy: pagy_metadata(@pagy)}
+                  pagy: pagy_metadata(@pagy),
+                }
+
+  
   end
 
 
@@ -74,6 +78,12 @@ class PlantsController < ApplicationController
   end
 
   private
+
+  def limit
+    # the fetch sets a default of 10 if the user doesn't provide a value
+    [params.fetch(:limit, 5).to_i, MAX_PAGINATION_LIMIT].min
+  end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_plant
       @plant = Plant.find(params[:id])
