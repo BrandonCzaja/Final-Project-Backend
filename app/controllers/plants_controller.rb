@@ -9,7 +9,7 @@ class PlantsController < ApplicationController
     result = JSON.parse(response.body)
 
     plant_data = result['data'].map do |element|
-      data = { 
+      api_data = { 
         api_id: element['id'],
         common_name: element['common_name'],
         slug: element['slug'],
@@ -24,12 +24,15 @@ class PlantsController < ApplicationController
 
     end
 
-    # Pagy - KEEP
-    # @pagy, @plants = pagy(Plant.all, items: 10)
-    # render json: {data: @plants, 
-    #               pagy: pagy_metadata(@pagy)}
+    # Pagy testing - KEEP
+    @pagy, @plants = pagy(Plant.all, items: 10)
+    render json: {data: @plants, 
+                  pagy: pagy_metadata(@pagy)}
 
-    @plants = Plant.all
+
+    # For Deployment
+    # @plants = Plant.all
+    # render json: @plants
   end
 
 
