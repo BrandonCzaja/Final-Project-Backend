@@ -9,7 +9,7 @@ class PlantsController < ApplicationController
     result = JSON.parse(response.body)
 
     plant_data = result['data'].map do |element|
-      api_data = { 
+      data = { 
         api_id: element['id'],
         common_name: element['common_name'],
         slug: element['slug'],
