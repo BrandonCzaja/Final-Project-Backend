@@ -32,7 +32,7 @@ class PlantsController < ApplicationController
 
   
     # Don't change these. This works perfectly
-    @pagy, @plants = pagy(Plant.all, items: 10, size: [1,4,4,1])
+    @pagy, @plants = pagy(Plant.all, items: 4, size: [1,4,4,1])
     render json: {data: @plants, 
                   pagy: pagy_metadata(@pagy)}
   end
