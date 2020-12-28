@@ -49,4 +49,7 @@ gem 'figaro'
 
 # API Pagination 
 gem 'pagy'
+
+
 gem 'bulma'
+

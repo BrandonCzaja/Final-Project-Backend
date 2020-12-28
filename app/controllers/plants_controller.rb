@@ -32,8 +32,9 @@ class PlantsController < ApplicationController
 
   
 
-
-    @pagy, @plants = pagy(Plant.all)
+    @pagy, @plants = pagy(Plant.all, items: 10, size: [1,4,4,1])
+    # @pagy, @plants = pagy(Plant.all)
+    # @plants = Plant.limit(2)
   
     render json: {data: @plants, 
                   pagy: pagy_metadata(@pagy)}
