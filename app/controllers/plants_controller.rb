@@ -4,7 +4,7 @@ class PlantsController < ApplicationController
   before_action :set_plant, only: [:show, :update, :destroy]
 
   # Has to be capitalized 
-  MAX_PAGINATION_LIMIT = 10
+  MAX_PAGINATION_LIMIT = 100
   
 
   # GET /plants
@@ -32,19 +32,12 @@ class PlantsController < ApplicationController
 
   
 
+
     @pagy, @plants = pagy(Plant.all)
+  
     render json: {data: @plants, 
-                  pagy: pagy_metadata(@pagy),
-                }
-
-  
+                  pagy: pagy_metadata(@pagy)}
   end
-
-
-
-  # def results
-  
-  # end
 
 
   # GET /plants/1
@@ -81,7 +74,7 @@ class PlantsController < ApplicationController
 
   def limit
     # the fetch sets a default of 10 if the user doesn't provide a value
-    [params.fetch(:limit, 5).to_i, MAX_PAGINATION_LIMIT].min
+    [params.fetch(:limit, 10).to_i, MAX_PAGINATION_LIMIT].min
   end
 
     # Use callbacks to share common setup or constraints between actions.
