@@ -31,11 +31,8 @@ class PlantsController < ApplicationController
     end
 
   
-
+    # Don't change these. This works perfectly
     @pagy, @plants = pagy(Plant.all, items: 10, size: [1,4,4,1])
-    # @pagy, @plants = pagy(Plant.all)
-    # @plants = Plant.limit(2)
-  
     render json: {data: @plants, 
                   pagy: pagy_metadata(@pagy)}
   end
