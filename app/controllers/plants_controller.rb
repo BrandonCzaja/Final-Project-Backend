@@ -30,8 +30,6 @@ class PlantsController < ApplicationController
 
     end
 
-  
-    # Don't change these. This works perfectly
     @pagy, @plants = pagy(Plant.all, items: 4, size: [1,4,4,1])
     render json: {data: @plants, 
                   pagy: pagy_metadata(@pagy)}
